@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,11 @@
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/Tirabook.png" alt="TiraBook Logo" width="30" height="30">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/Tirabook.png" alt="TiraBook Logo" width="35" height="35" class="me-2">
+            <span style="font-size: 1.5rem; color: #fff;">Tira Book</span>
         </a>
+    
     
 
         <!-- زر البحث -->
@@ -40,34 +42,72 @@
     <div class="container mt-1">
         <h1 class="text-center">Welcome to TiraBook</h1>
         <p class="text-center">The giant in technological content and innovative eBooks.</p>
-        <br> <p style= "text-align: center; color:green; " >All books At a price 1$ only</p>
+        <br> <p style= "text-align: center; color:green; " >Books priced at $1 are free for September 9th only</p>
     </div>
 
 
 
     <div class="container">
         <div class="row">
-            <div class="book-container">
+    <div class="book-container" onclick="showPopup()">
                         <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/تعلم البرمجة.png" alt="Learn programming" class="book-img">
-                        
-                        
                 <p class="book-text">تعلم البرمجة</p>
             </div>
-            <div class="book-container">
-                <img src="https://via.placeholder.com/150" alt="Book 2" class="book-img">
-                <p class="book-text">Book 2</p>
+    <div class="book-container" onclick="showPopup()">
+                <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/python.jpg" alt="Book 2" class="book-img">
+                <p class="book-text">تعلم البايثون python</p>
             </div>
-            <div class="book-container">
-                <img src="https://via.placeholder.com/150" alt="Book 3" class="book-img">
-                <p class="book-text">Book 3</p>
+    <div class="book-container" onclick="showPopup()">
+                <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/metasploit.png" alt="Book 3" class="book-img">
+                <p class="book-text">اختراق الاجهزة ب metasploit</p>
             </div>
-            <div class="book-container">
-                <img src="https://via.placeholder.com/150" alt="Book 4" class="book-img">
-                <p class="book-text">Book 4</p>
+    <div class="book-container" onclick="showPopup()">
+                <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/os.png" alt="Book 4" class="book-img">
+                <p class="book-text">تاريخ تطور انظمة التشغيل</p>
             </div>
-            <!-- أضف المزيد من الحاويات بنفس النمط -->
+
+    <div class="book-container" onclick="showPopup()">
+                        <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/web.png" alt="book 5" class="book-img">
+                <p class="book-text">تقنيات الويب</p>
+            </div>
+    <div class="book-container" onclick="showPopup()">
+                <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/ai.png" alt="Book 6" class="book-img">
+                <p class="book-text">الذكاء الاصطناعي</p>
+            </div>
+    <div class="book-container" onclick="showPopup()">
+                <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/termux.png" alt="Book 7" class="book-img">
+                <p class="book-text">اساسيات termux</p>
+            </div>
+    <div class="book-container" onclick="showPopup()">
+                <img src="https://raw.githubusercontent.com/Yacne/Tira-Book/main/virus.png" alt="Book 8" class="book-img">
+                <p class="book-text">الفيروسات الالكترونية</p>
+            </div>
+            
         </div>
     </div>
+
+
+
+<!-- محتوى الـpopup -->
+<div class="popup" id="popup">
+  <!-- Close button -->
+  <button class="close-button" id="closeButton">
+    <i class="fas fa-times-circle" style="color: red;"></i>
+  </button>
+  <!-- صورة وعنوان الـpopup -->
+  <div class="popup-header">
+    <img id="popupImage" src="" alt="Book Image" class="book-img">
+    <h2 id="popupTitle" class="book-text"></h2>
+  </div>
+  <!-- وصف الكتاب -->
+  <p id="popupDescription" class="popup-description"></p>
+  <!-- زر الشراء -->
+  <button class="buy-button">
+    <i class="fas fa-shopping-cart"></i>
+    Buy
+  </button>
+</div>
+
 
 <!-- Footer -->
 <footer class="footer">
