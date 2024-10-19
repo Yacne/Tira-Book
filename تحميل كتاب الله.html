@@ -38,16 +38,18 @@
     <div class="container">
         <img style="border-radius: 15px; width: 70%; height: Auto;" src="Qur'an.jpg" alt="Qur'an" style="max-width: 100%; height: auto;">
 <h2 style=" color: white; text-shadow: 0px 1px 1px black;">كتاب الله : الْقُرْآنُ الْكَرِيمُ</h2>
-        <a href="الْقُرْآنُ الْكَرِيمُ.pdf" download>
+        <a href="الْقُرْآنُ الْكَرِيمُ.pdf" id="downloadLink">
             <button class="button"> تحميل </button>
         </a>
     </div>
     <script>
-    const link = document.createElement('a');
-link.href = 'الْقُرْآنُ الْكَرِيمُ.pdf';
-link.download = 'الْقُرْآنُ الْكَرِيمُ.pdf';
-link.click();
-    
+    document.querySelector('.button').addEventListener('click', function(e) {
+        e.preventDefault(); // منع التنقل التلقائي
+        const link = document.createElement('a');
+        link.href = 'الْقُرْآنُ الْكَرِيمُ.pdf';
+        link.download = 'الْقُرْآنُ الْكَرِيمُ.pdf';
+        link.click();
+    });
     </script>
 </body>
 </html>
