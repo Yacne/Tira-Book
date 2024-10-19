@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل كتاب الله : الْقُرْآنُ الْكَرِيمُ</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+       
+.button {
+    background-color: #FFFFFF;
+    font-size: 1.5rem;
+    border: 2px solid #00822B;
+    color: #009524;
+    border-radius: 5px;
+    padding: 5px 20px; /* تقليل القيمة هنا */
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img style="border-radius: 15px; width: 70%; height: Auto;" src="Qur'an.jpg" alt="Qur'an" style="max-width: 100%; height: auto;">
+<h2 style=" color: white; text-shadow: 0px 1px 1px black;">كتاب الله : الْقُرْآنُ الْكَرِيمُ</h2>
+        <a href="الْقُرْآنُ الْكَرِيمُ.pdf" download>
+            <button class="button"> تحميل </button>
+        </a>
+    </div>
+    <script>
+    const link = document.createElement('a');
+link.href = 'الْقُرْآنُ الْكَرِيمُ.pdf';
+link.download = 'الْقُرْآنُ الْكَرِيمُ.pdf';
+link.click();
+    
+    </script>
+</body>
+</html>
